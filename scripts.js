@@ -72,7 +72,7 @@ const newTask = {
 };
 
 initialTasks.unshift(newTask);
-console.log(initialTasks);
+// console.log(initialTasks);s
 
 
 // ======================================================================
@@ -105,6 +105,15 @@ while (userTask2.length > 1 && userTaskDesc2.length > 1) {
   }
 }
 
+const newTask2 = {
+  id: initialTasks.length + 1,
+  title: userTask2,
+  description: userTaskDesc2,
+  status: tasktStatusPrompt2,
+};
+
+initialTasks.unshift(newTask2);
+
 // ======================================================================
 // ======================================================================
 
@@ -134,3 +143,12 @@ while (userTask3.length > 1 && userTaskDesc2.length > 1) {
     break; 
   }
 }
+
+const newTask3 = {
+  id: initialTasks.length + 1,
+  title: userTask3,
+  description: userTaskDesc3,
+  status: tasktStatusPrompt3,
+};
+
+initialTasks.unshift(newTask3);
