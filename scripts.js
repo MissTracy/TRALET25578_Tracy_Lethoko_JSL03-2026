@@ -25,12 +25,14 @@ const initialTasks = [
 
 ];
 
-console.log (initialTasks);
+//logs all tasks to console
+console.log ("All tasks: " , initialTasks);
+
+
 // ======================================================================
 // ======================================================================
 
 //variables for user/task1 input
-
 const userTask = prompt("Enter task 1 title: ") || "";
 const userTaskDesc = prompt("Enter task description: ") || "";
 const invalidStatus =
@@ -40,8 +42,7 @@ let tasktStatusPrompt = (prompt(
   "please enter task status: 'todo', 'doing', or 'done'."
 ) || "").toLocaleLowerCase();
 
-//loop for task1
-
+////loop for task 1 requesting user to enter task status and detials
 while (userTask.length > 1 && userTaskDesc.length > 1) {
   if (
     tasktStatusPrompt !== "todo" &&
@@ -64,22 +65,21 @@ while (userTask.length > 1 && userTaskDesc.length > 1) {
 
 }
 
+//adds task 1 to array
 const newTask = {
   id: initialTasks.length + 1,
   title: userTask,
   description: userTaskDesc,
   status: tasktStatusPrompt,
 };
-
-initialTasks.unshift(newTask);
-// console.log(initialTasks);s
+initialTasks.push(newTask);
+// console.log(initialTasks);
 
 
 // ======================================================================
 // ======================================================================
 
-//variables for user/task2 input
-
+//variables for usertask 2 input
 const userTask2 = prompt("Enter task 2 title: ") || "";
 const userTaskDesc2 = prompt("Enter task 2 description: ") || "";
 
@@ -87,8 +87,7 @@ let tasktStatusPrompt2 = (prompt(
   "please enter task 2 status: 'todo', 'doing', or 'done'."
 ) || "").toLocaleLowerCase();
 
-//loop for task2
-
+////loop for task2 requesting user to enter task status and detials
 while (userTask2.length > 1 && userTaskDesc2.length > 1) {
   if (
     tasktStatusPrompt2 !== "todo" &&
@@ -105,20 +104,20 @@ while (userTask2.length > 1 && userTaskDesc2.length > 1) {
   }
 }
 
+//adds task 2 to array
 const newTask2 = {
   id: initialTasks.length + 1,
   title: userTask2,
   description: userTaskDesc2,
   status: tasktStatusPrompt2,
 };
-
-initialTasks.unshift(newTask2);
+initialTasks.push(newTask2);
 
 // ======================================================================
 // ======================================================================
 
 
-//task3
+//task 3 variables
 const userTask3 = prompt("Enter task 3 title: ") || "";
 const userTaskDesc3 = prompt("Enter task 3 description: ") || "";
 
@@ -126,8 +125,7 @@ let tasktStatusPrompt3 = (prompt(
   "please enter task 3 status: 'todo', 'doing', or 'done'."
 ) || "").toLocaleLowerCase();
 
-//loop for task3
-
+////loop for task3 requesting user to enter task status and detials
 while (userTask3.length > 1 && userTaskDesc2.length > 1) {
   if (
     tasktStatusPrompt3 !== "todo" &&
@@ -139,16 +137,29 @@ while (userTask3.length > 1 && userTaskDesc2.length > 1) {
     console.log("No tasks completed, let's get to work!");
     break;
   } else if (tasktStatusPrompt3 === "done") {
+    alert("There are enough tasks on your board, please check them in the console.")
     console.log("Title: " + userTask3 + ", status: done");
-    break; 
+    break;
   }
 }
 
+//adds last task to array
 const newTask3 = {
   id: initialTasks.length + 1,
   title: userTask3,
   description: userTaskDesc3,
-  status: tasktStatusPrompt3,
+  status: tasktStatusPrompt
 };
+initialTasks.push(newTask3);
 
-initialTasks.unshift(newTask3);
+// ======================================================================
+// ======================================================================
+
+
+//added filter to log done tasks
+
+// const adults = ages.filter((age) => age >= 18);
+const doneItems = initialTasks.filter(
+  (task) => task.status === "done"
+);
+console.log("Completed tasks: " , doneItems);
