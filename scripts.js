@@ -1,6 +1,5 @@
 const initialTasks = [
 
-
   {
     id: 1,
     title: "Launch Epic Career",
@@ -42,7 +41,7 @@ let tasktStatusPrompt = (prompt(
   "please enter task status: 'todo', 'doing', or 'done'."
 ) || "").toLocaleLowerCase();
 
-////loop for task 1 requesting user to enter task status and detials
+//loop for task 1 requesting user to enter task status and detials
 while (userTask.length > 1 && userTaskDesc.length > 1) {
   if (
     tasktStatusPrompt !== "todo" &&
@@ -57,11 +56,6 @@ while (userTask.length > 1 && userTaskDesc.length > 1) {
     console.log("Title: " + userTask + ", status: done");
     break; 
   }
-  // else{
-    
-  //  initialTasks.unshift (userTask)
-    
-  // }
 
 }
 
@@ -73,8 +67,6 @@ const newTask = {
   status: tasktStatusPrompt,
 };
 initialTasks.push(newTask);
-// console.log(initialTasks);
-
 
 // ======================================================================
 // ======================================================================
@@ -87,7 +79,7 @@ let tasktStatusPrompt2 = (prompt(
   "please enter task 2 status: 'todo', 'doing', or 'done'."
 ) || "").toLocaleLowerCase();
 
-////loop for task2 requesting user to enter task status and detials
+//loop for task2 requesting user to enter task status and detials
 while (userTask2.length > 1 && userTaskDesc2.length > 1) {
   if (
     tasktStatusPrompt2 !== "todo" &&
@@ -125,7 +117,7 @@ let tasktStatusPrompt3 = (prompt(
   "please enter task 3 status: 'todo', 'doing', or 'done'."
 ) || "").toLocaleLowerCase();
 
-////loop for task3 requesting user to enter task status and detials
+//loop for task3 requesting user to enter task status and detials
 while (userTask3.length > 1 && userTaskDesc2.length > 1) {
   if (
     tasktStatusPrompt3 !== "todo" &&
@@ -157,8 +149,6 @@ initialTasks.push(newTask3);
 
 
 //added filter to log done tasks
-
-// const adults = ages.filter((age) => age >= 18);
 const doneItems = initialTasks.filter(
   (task) => task.status === "done"
 );
