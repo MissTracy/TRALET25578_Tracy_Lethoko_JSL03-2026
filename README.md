@@ -1,4 +1,4 @@
-# JSL03 Project Brief: Console-Based Task Manager
+# Project: Console-Based Task Manager
 
 ##
 
@@ -20,16 +20,7 @@ This project involves creating a **simple task management system** where users c
 - Log **all tasks** in the console with a clear label for easy review.
 - Log **only completed tasks** (status: `"done"`) in the console under a "Completed Tasks" label for quick reference.
 
-## Code Quality & Maintainability
+## Technologies Used
 
-- Use meaningful variable and function names to ensure readability and maintainability.
-- Follow consistent indentation and formatting to enhance code clarity.
-- Include comments explaining key logic and functionality to support future modifications.
-
-## Expected Outcome
-
-A **structured and limited task management system** that enables users to add, review, and filter tasks efficiently while ensuring **clean, well-documented, and maintainable code.**
-
-**Console Log of all and completed tasks**
-
-![console log](./explainer-images/console%20log.png)
+Language: JavaScript ,HTML & CSS
+Environment: Web Browser 
